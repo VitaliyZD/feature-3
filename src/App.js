@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import Competencies from './components/Competencies';
+import './App.css'
 
 function App() {
+
+  const competencies = [
+    {
+      name: 'HTML',
+      description: 'Язык разметки страницы',
+      level: '40%'
+    },
+    {
+      name: 'CSS',
+      description: 'Язык стилей страницы',
+      level: '30%'
+    },
+    {
+      name: 'JS',
+      description: 'Язык программирования',
+      level: '20%'
+    },
+    {
+      name: 'React',
+      description: 'Библиотека пользовательских интерфейсов',
+      level: '10%'
+    }
+  ]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='content'>
+      <h1>Компетенции и уровень их изучения</h1>
+      <Competencies competencies={competencies}></Competencies>
     </div>
   );
 }
